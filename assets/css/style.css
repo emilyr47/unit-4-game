@@ -1,0 +1,50 @@
+body {
+    background-color: lightblue;
+    width: 100%;
+}
+
+#title {
+    background-color: orange;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#instructions {
+    background-color: tan;
+    color: black;
+    margin-bottom: 20px;
+    height: 400px;
+    padding-top: 20px;
+}
+
+#green-box {
+    background-color: lightgreen;
+    color: black;
+}
+
+#wins-losses {
+    background-color: aqua;
+    color: black;
+    margin-left: 20px;
+}
+
+#crystals {
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+#total-score {
+    background-color: teal;
+    color: black;
+    margin-bottom: 20px;
+}
+
+#total-score-int {
+    background-color: teal;
+    color: black;
+    height: 150px;
+    margin-bottom: 20px;
+}
