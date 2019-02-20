@@ -54,13 +54,13 @@ function randomCrystalBlue() {
         $('#total-score').html("Total: "+ totalScore); 
         if (totalScore === goalScore) {
             //wins = Number(1) + Number($(wins).val());
-            $('#wins').html("Wins:" + wins + parseInt("1"));
+            win();
 
         } 
 
         
         if (totalScore > goalScore) {
-            $('#losses').html("Losses:" + losses + parseInt("1"));
+            lost();
         }
      });
       $('#total-score').html("Total: "+ totalScore);
@@ -69,11 +69,11 @@ function randomCrystalBlue() {
         totalScore = Number(totalScore) + Number($(this).val());
           $('#total-score').html("Total: "+ totalScore);
           if (totalScore === goalScore) {
-            $('#wins').html("Wins:" + wins + parseInt("1"));
+            win();
         }  
         
         if (totalScore > goalScore) {
-            $('#losses').html("Losses:" + losses + parseInt("1"));
+            lost();
         }
        });
         $('#total-score').html("Total: "+ totalScore);
@@ -83,11 +83,13 @@ function randomCrystalBlue() {
            $('#total-score').html("Total: "+ totalScore); 
            if (totalScore === goalScore) {
             //wins = Number(1) + Number($(wins).val());
-            $('#wins').html("Wins:" + wins + parseInt("1"));
+            //$('#wins').html("Wins:" + wins + parseInt("1"));
+            win();
         }   
         
         if (totalScore > goalScore) {
-            $('#losses').html("Losses:" + losses + parseInt("1"));
+            //$('#losses').html("Losses:" + losses + parseInt("1"));
+            lost();
         }
 
         });
@@ -98,12 +100,43 @@ function randomCrystalBlue() {
             $('#total-score').html("Total: "+ totalScore); 
             if (totalScore === goalScore) {
                 //wins = Number(1) + Number($(wins).val());
-                $('#wins').html("Wins:" + wins + parseInt("1"));
+                win();
             }
 
             if (totalScore > goalScore) {
-                $('#losses').html("Losses:" + losses + parseInt("1"));
+                lost();
             }
         });
         $('#total-score').html("Total: "+ totalScore);
+
+function win() {
+    wins++;
+    $('#wins').html("Wins:" + wins);
+    resetGame();
+    }
+          
+function lost() {
+    losses++;
+    $('#losses').html("Losses:" + losses);
+    resetGame();
+    }
+
+function resetGame() {
+    totalScore = 0;
+    $('#total-score').html("Total: "+ totalScore);
+    goalScore = Math.floor(Math.random() * 19) + 120;
+    $("#goal-score").html(goalScore);
+    yellowValue = Math.floor(Math.random() * 12) + 1;
+    $("#yellow-crystal").html(yellowValue);
+    $("#yellow-crystal").val(yellowValue);
+    purpleValue = Math.floor(Math.random() * 12) + 1;
+    $("#purple-crystal").html(purpleValue);
+    $("#purple-crystal").val(purpleValue);
+    redValue = Math.floor(Math.random() * 12) + 1;
+    $("#red-crystal").html(redValue);
+    $("#red-crystal").val(redValue);
+    blueValue = Math.floor(Math.random() * 12) + 1;
+    $("#blue-crystal").html(blueValue);
+    $("#blue-crystal").val(blueValue);
+    }
     
