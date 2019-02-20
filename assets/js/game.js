@@ -1,4 +1,5 @@
 // generating random number for the goal score
+
 function randomGoal() {
 $("#goal-score").html(goalScore);
 }
@@ -43,28 +44,66 @@ function randomCrystalBlue() {
     $("#blue-crystal").val(blueValue);
    // $( "#blue-crystal" ).click(function() {
       //});
-
-    var totalScore = 0;
+    totalScore = 0;
+    var wins = 0;
+    $("#wins").val(0);
+    var losses = 0;
+    $("#losses").val(0);
     $("#blue-crystal").click(function(){    
       totalScore = Number(totalScore) + Number($(this).val());
-        $('#total-score').html("Total: "+ totalScore);        
+        $('#total-score').html("Total: "+ totalScore); 
+        if (totalScore === goalScore) {
+            //wins = Number(1) + Number($(wins).val());
+            $('#wins').html("Wins:" + wins + parseInt("1"));
+
+        } 
+
+        
+        if (totalScore > goalScore) {
+            $('#losses').html("Losses:" + losses + parseInt("1"));
+        }
      });
       $('#total-score').html("Total: "+ totalScore);
 
     $("#red-crystal").click(function(){    
         totalScore = Number(totalScore) + Number($(this).val());
-          $('#total-score').html("Total: "+ totalScore);        
+          $('#total-score').html("Total: "+ totalScore);
+          if (totalScore === goalScore) {
+            $('#wins').html("Wins:" + wins + parseInt("1"));
+        }  
+        
+        if (totalScore > goalScore) {
+            $('#losses').html("Losses:" + losses + parseInt("1"));
+        }
        });
         $('#total-score').html("Total: "+ totalScore);
 
     $("#purple-crystal").click(function(){    
         totalScore = Number(totalScore) + Number($(this).val());
-           $('#total-score').html("Total: "+ totalScore);        
+           $('#total-score').html("Total: "+ totalScore); 
+           if (totalScore === goalScore) {
+            //wins = Number(1) + Number($(wins).val());
+            $('#wins').html("Wins:" + wins + parseInt("1"));
+        }   
+        
+        if (totalScore > goalScore) {
+            $('#losses').html("Losses:" + losses + parseInt("1"));
+        }
+
         });
         $('#total-score').html("Total: "+ totalScore);
     
     $("#yellow-crystal").click(function(){    
         totalScore = Number(totalScore) + Number($(this).val());
-            $('#total-score').html("Total: "+ totalScore);        
+            $('#total-score').html("Total: "+ totalScore); 
+            if (totalScore === goalScore) {
+                //wins = Number(1) + Number($(wins).val());
+                $('#wins').html("Wins:" + wins + parseInt("1"));
+            }
+
+            if (totalScore > goalScore) {
+                $('#losses').html("Losses:" + losses + parseInt("1"));
+            }
         });
         $('#total-score').html("Total: "+ totalScore);
+    
