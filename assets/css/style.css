@@ -50,3 +50,33 @@ body {
     height: 150px;
     margin-bottom: 20px;
 }
+
+#yellow-crystal {
+    width: 50px;
+    height: 50px;
+}
+
+#purple-crystal {
+    width: 50px;
+    height: 50px;
+}
+
+#red-crystal {
+    width: 50px;
+    height: 50px;
+}
+
+#blue-crystal {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* @media (min-width: 576px) { ... }
+
+@media (min-width: 768px) { ... }
+
+@media (min-width: 992px) { ... }
+
+@media (min-width: 1200px) { ... }
+*/
